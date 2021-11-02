@@ -1,5 +1,4 @@
 package API_Package;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import model.getTrend.queryParam;
@@ -7,11 +6,11 @@ import model.signIn.signIn;
 import model.updCus.*;
 import org.apache.commons.lang3.RandomStringUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Variable.Variable.*;
 import static io.restassured.RestAssured.given;
-import static org.apache.commons.lang3.RandomStringUtils.random;
 
 public class API {
     public static String comment_cus;

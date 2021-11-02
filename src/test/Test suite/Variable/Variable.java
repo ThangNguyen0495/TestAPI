@@ -1,5 +1,4 @@
 package Variable;
-
 public class Variable {
     //Uri
     public static String Uri ="https://sit-thk-app-server.azurewebsites.net";

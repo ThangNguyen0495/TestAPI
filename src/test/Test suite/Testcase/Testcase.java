@@ -3,11 +3,11 @@ package Testcase;
 import API_Package.API;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import model.updCus.*;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import static Variable.Variable.*;
+
+import static Variable.Variable.Uri;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class Testcase {
@@ -49,6 +49,8 @@ public class Testcase {
     public void getTrend() {
         API api4_1 = new API();
         Response res = api4_1.getTrend(token);
-//        res.then().assertThat().statusCode(HttpStatus.SC_OK);
+        res.then().assertThat().statusCode(HttpStatus.SC_OK);
+        res.prettyPrint();
+//        res.then().assertThat().statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 }
