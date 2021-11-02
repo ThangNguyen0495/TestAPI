@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "machine_id": {
+      "type": "string"
+    },
+    "machine_name": {
+      "type": "string"
+    },
+    "date_from": {
+      "type": "string"
+    },
+    "date_to": {
+      "type": "string"
+    },
+    "amps": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "serial_no": {
+              "type": "string"
+            },
+            "axes": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "axis_id": {
+                      "type": "integer"
+                    },
+                    "axis_name": {
+                      "type": "string"
+                    },
+                    "sensors": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "algorithm_ids": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "sensor_id": {
+                              "type": "integer"
+                            },
+                            "sensor_name": {
+                              "type": "string"
+                            },
+                            "product_id": {
+                              "type": "integer"
+                            },
+                            "product_name": {
+                              "type": "string"
+                            },
+                            "logicalchs": {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "logicalch_id": {
+                                      "type": "integer"
+                                    },
+                                    "plot": {
+                                      "type": "array",
+                                      "items": [
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "session_id": {
+                                              "type": "string"
+                                            },
+                                            "date": {
+                                              "type": "string"
+                                            },
+                                            "algorithm_id": {
+                                              "type": "integer"
+                                            },
+                                            "level": {
+                                              "type": "number"
+                                            },
+                                            "threshold_exceeded": {
+                                              "type": "integer"
+                                            },
+                                            "threshold_warning": {
+                                              "type": "integer"
+                                            },
+                                            "monitor": {
+                                              "type": "integer"
+                                            },
+                                            "use": {
+                                              "type": "integer"
+                                            }
+                                          },
+                                          "required": [
+                                            "session_id",
+                                            "date",
+                                            "algorithm_id",
+                                            "level",
+                                            "threshold_exceeded",
+                                            "threshold_warning",
+                                            "monitor",
+                                            "use"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "logicalch_id",
+                                    "plot"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "algorithm_ids",
+                            "sensor_id",
+                            "sensor_name",
+                            "product_id",
+                            "product_name",
+                            "logicalchs"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "axis_id",
+                    "axis_name",
+                    "sensors"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "serial_no",
+            "axes"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "machine_id",
+    "machine_name",
+    "date_from",
+    "date_to",
+    "amps"
+  ]
+}

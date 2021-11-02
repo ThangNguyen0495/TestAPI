@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "company_id": {
+          "type": "integer"
+        },
+        "company_name": {
+          "type": "string"
+        },
+        "factory_id": {
+          "type": "integer"
+        },
+        "factory_name": {
+          "type": "string"
+        },
+        "line_id": {
+          "type": "integer"
+        },
+        "line_name": {
+          "type": "string"
+        },
+        "machine_id": {
+          "type": "integer"
+        },
+        "machine_name": {
+          "type": "string"
+        },
+        "service_id": {
+          "type": "integer"
+        },
+        "service_name": {
+          "type": "string"
+        },
+        "serial_no": {
+          "type": "string"
+        },
+        "serial_id": {
+          "type": "integer"
+        },
+        "thk_sale": {
+          "type": "null"
+        },
+        "thk_team": {
+          "type": "null"
+        },
+        "thk_office": {
+          "type": "null"
+        },
+        "start_month": {
+          "type": "string"
+        },
+        "contract_period": {
+          "type": "null"
+        },
+        "ship_date": {
+          "type": "null"
+        },
+        "mail": {
+          "type": "null"
+        },
+        "tel": {
+          "type": "null"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "cnc_plc": {
+          "type": "null"
+        },
+        "batch_trigger": {
+          "type": "null"
+        },
+        "threshold": {
+          "type": "null"
+        },
+        "diag_mode": {
+          "type": "null"
+        },
+        "user_representative": {
+          "type": "null"
+        },
+        "threshold_setting": {
+          "type": "null"
+        },
+        "data_acquisition": {
+          "type": "object",
+          "properties": {
+            "scheduled_number_of_times": {
+              "type": [
+                "integer",
+                "null"]
+            },
+            "final_acquisition_date": {
+              "type": "string"
+            },
+            "last_stop_days": {
+              "type": "integer"
+            },
+            "number_of_times_in_last_month": {
+              "type": "integer"
+            },
+            "total_number_of_times": {
+              "type": "integer"
+            },
+            "last_last_stop_day": {
+              "type": "null"
+            },
+            "unacquired_alert": {
+              "type": "integer"
+            },
+            "comment": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "scheduled_number_of_times",
+            "final_acquisition_date",
+            "last_stop_days",
+            "number_of_times_in_last_month",
+            "total_number_of_times",
+            "last_last_stop_day",
+            "unacquired_alert",
+            "comment"
+          ]
+        },
+        "alert": {
+          "type": "object",
+          "properties": {
+            "previous": {
+              "type": "null"
+            },
+            "standard": {
+              "type": "null"
+            },
+            "average": {
+              "type": "null"
+            },
+            "median": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "previous",
+            "standard",
+            "average",
+            "median"
+          ]
+        },
+        "next_time_follow": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "note"
+          ]
+        }
+      },
+      "required": [
+        "company_id",
+        "company_name",
+        "factory_id",
+        "factory_name",
+        "line_id",
+        "line_name",
+        "machine_id",
+        "machine_name",
+        "service_id",
+        "service_name",
+        "serial_no",
+        "serial_id",
+        "thk_sale",
+        "thk_team",
+        "thk_office",
+        "start_month",
+        "contract_period",
+        "ship_date",
+        "mail",
+        "tel",
+        "comment",
+        "cnc_plc",
+        "batch_trigger",
+        "threshold",
+        "diag_mode",
+        "user_representative",
+        "threshold_setting",
+        "data_acquisition",
+        "alert",
+        "next_time_follow"
+      ]
+    }
+  ]
+}
