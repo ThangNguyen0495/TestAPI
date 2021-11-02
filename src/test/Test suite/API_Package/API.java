@@ -75,13 +75,13 @@ public class API {
 
         //customers
         customers customer = new customers();
-        customer.setCompany_id(company_id);
+        customer.setCompany_id(company_id_upd);
         customer.setCompany_name(company_name);
-        customer.setFactory_id(factory_id);
+        customer.setFactory_id(factory_id_upd);
         customer.setFactory_name(factory_name);
-        customer.setLine_id(line_id);
+        customer.setLine_id(line_id_upd);
         customer.setLine_name(line_name);
-        customer.setMachine_id(machine_id);
+        customer.setMachine_id(machine_id_upd);
         customer.setMachine_name(machine_name);
         customer.setService_id(service_id);
         customer.setService_name(service_name);
@@ -129,10 +129,10 @@ public class API {
 
         //set query param
         queryParam query = new queryParam();
-        query.setCompany_id(company_id);
-        query.setFactory_id(factory_id);
-        query.setLine_id(line_id);
-        query.setMachine_id(machine_id);
+        query.setCompany_id(company_id_trend);
+        query.setFactory_id(factory_id_trend);
+        query.setLine_id(line_id_trend);
+        query.setMachine_id(machine_id_trend);
         query.setFrom(from);
         query.setTo(to);
 

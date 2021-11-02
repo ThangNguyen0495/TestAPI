@@ -9,9 +9,13 @@ public class Variable {
     public static String password = "0123456789";
 
     //body API 3-2: updateCustomerlist
+    public static int company_id_upd = 3;
     public static String company_name = "株式会社ダ事業部";
+    public static int factory_id_upd = 1;
     public static String factory_name = "滋賀事業所　J棟";
+    public static int line_id_upd = 1;
     public static String line_name = "ApiTestChangeLine";
+    public static int machine_id_upd = 1;
     public static String machine_name = "RM D-10000";
     public static int service_id = 1;
     public static String service_name = "OMNIedge_Multi";
@@ -51,10 +55,10 @@ public class Variable {
     public static String note = "";
 
     //query param API 4-1: getTrendygarph
-    public static int company_id = 3;
-    public static int factory_id = 1;
-    public static int line_id = 1;
-    public static int machine_id = 1;
+    public static int company_id_trend = 36;
+    public static int factory_id_trend = 1;
+    public static int line_id_trend = 1;
+    public static int machine_id_trend = 1;
     public static String from ="2020-01-01";
     public static String to = "2021-11-01";
 
