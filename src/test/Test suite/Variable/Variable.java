@@ -29,7 +29,7 @@ public class Variable {
     public static String ship_date = null;
     public static String mail = null;
     public static String tel = null;
-    public static String comment_cus = null;
+//    public static String comment_cus = null;
     public static String cnc_plc = null;
     public static String batch_trigger = null;
     public static String threshold = null;

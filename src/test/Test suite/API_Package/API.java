@@ -5,15 +5,16 @@ import io.restassured.response.Response;
 import model.getTrend.queryParam;
 import model.signIn.signIn;
 import model.updCus.*;
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.commons.lang3.RandomStringUtils;
 
-import java.io.File;
+import java.util.*;
 
 import static Variable.Variable.*;
 import static io.restassured.RestAssured.given;
+import static org.apache.commons.lang3.RandomStringUtils.random;
 
 public class API {
+    public static String comment_cus;
 
     /**
      * API 1-1: signIn
@@ -50,6 +51,7 @@ public class API {
      * API 3-2: updateCustomerlist
      */
     public Response updCus(String token) {
+        comment_cus = RandomStringUtils.randomAlphanumeric(512);
         //data_acquisition
         data_acquisition data_acquisition = new data_acquisition();
         data_acquisition.setScheduled_number_of_times(scheduled_number_of_times);
