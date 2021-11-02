@@ -74,42 +74,43 @@ public class API {
         next_time_follow.setNote(note);
 
         //customers
-        customers customers = new customers();
-        customers.setCompany_id(company_id);
-        customers.setCompany_name(company_name);
-        customers.setFactory_id(factory_id);
-        customers.setFactory_name(factory_name);
-        customers.setLine_id(line_id);
-        customers.setLine_name(line_name);
-        customers.setMachine_id(machine_id);
-        customers.setMachine_name(machine_name);
-        customers.setService_id(service_id);
-        customers.setService_name(service_name);
-        customers.setSerial_id(serial_id);
-        customers.setSerial_no(serial_no);
-        customers.setThk_sale(thk_sale);
-        customers.setThk_office(thk_office);
-        customers.setThk_team(thk_team);
-        customers.setStart_month(start_month);
-        customers.setContract_period(contract_period);
-        customers.setShip_date(ship_date);
-        customers.setMail(mail);
-        customers.setTel(tel);
-        customers.setComment(comment_cus);
-        customers.setCnc_plc(cnc_plc);
-        customers.setBatch_trigger(batch_trigger);
-        customers.setThreshold(threshold);
-        customers.setDiag_mode(diag_mode);
-        customers.setUser_representative(user_representative);
-        customers.setThreshold_setting(threshold_setting);
-        customers.setData_acquisition(data_acquisition);
-        customers.setAlert(alert);
-        customers.setNext_time_follow(next_time_follow);
+        customers customer = new customers();
+        customer.setCompany_id(company_id);
+        customer.setCompany_name(company_name);
+        customer.setFactory_id(factory_id);
+        customer.setFactory_name(factory_name);
+        customer.setLine_id(line_id);
+        customer.setLine_name(line_name);
+        customer.setMachine_id(machine_id);
+        customer.setMachine_name(machine_name);
+        customer.setService_id(service_id);
+        customer.setService_name(service_name);
+        customer.setSerial_id(serial_id);
+        customer.setSerial_no(serial_no);
+        customer.setThk_sale(thk_sale);
+        customer.setThk_office(thk_office);
+        customer.setThk_team(thk_team);
+        customer.setStart_month(start_month);
+        customer.setContract_period(contract_period);
+        customer.setShip_date(ship_date);
+        customer.setMail(mail);
+        customer.setTel(tel);
+        customer.setComment(comment_cus);
+        customer.setCnc_plc(cnc_plc);
+        customer.setBatch_trigger(batch_trigger);
+        customer.setThreshold(threshold);
+        customer.setDiag_mode(diag_mode);
+        customer.setUser_representative(user_representative);
+        customer.setThreshold_setting(threshold_setting);
+        customer.setData_acquisition(data_acquisition);
+        customer.setAlert(alert);
+        customer.setNext_time_follow(next_time_follow);
 
         //updCusbody
-        List<customers> customers1 = new ArrayList<>();
-        customers1.add(customers);
+        List<customers> customers = new ArrayList<customers>();
+        customers.add(customer);
         updCus body = new updCus();
+        body.setCustomers(customers);
 
         //response API 3-2
         return given()
@@ -117,7 +118,7 @@ public class API {
                 .auth()
                 .oauth2(token)
                 .when()
-                .body(customers1)
+                .body(body)
                 .put("/api/customer-information");
     }
 
